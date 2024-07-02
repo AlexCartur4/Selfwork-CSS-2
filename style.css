@@ -37,7 +37,8 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-
+    font-size: ;
+    flex-wrap: wrap;
 }
 
 a {
@@ -48,4 +49,36 @@ a {
 a:hover{
     color: white;
     border-bottom: 2px solid white;
+}
+
+.pulse{
+    width: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer; 
+    background-color: white;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite; 
+    animation-duration: 1s;
+}
+
+@media screen and (max-width:500px) {
+    .pulse{
+        width: 40px;
+    }
 }
